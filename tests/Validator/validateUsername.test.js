@@ -70,7 +70,6 @@ describe('Validator.validateUsername() validateUsername method', () => {
         test('should return false for a username that is too long', () => {
             // Test a username that is too long
             const newusername = "aj1oooP".repeat(30);
-            console.log("new username =============",newusername);
             mockUsername = newusername;
             validator = new Validator(mockUsername,'tom@jerry.com', 'Password123!');
             expect(validator.validateUsername()).toBeDefined();
