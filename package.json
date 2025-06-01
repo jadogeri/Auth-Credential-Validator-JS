@@ -1,0 +1,29 @@
+{
+  "name": "auth_credential_validator",
+  "version": "1.0.0",
+  "description": "Javascript package to validate email , username and password",
+  "keywords": [
+    "auth_credential_validator",
+    "auth-credential-validator",
+    "javascript",
+    "email",
+    "username",
+    "password",
+    "credential-validator"
+  ],
+  "homepage": "https://github.com/jadogeri/Auth_Credential_Validator#readme",
+  "bugs": {
+    "url": "https://github.com/jadogeri/Auth_Credential_Validator/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jadogeri/Auth_Credential_Validator.git"
+  },
+  "license": "ISC",
+  "author": "Joseph Adogeri",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  }
+}
