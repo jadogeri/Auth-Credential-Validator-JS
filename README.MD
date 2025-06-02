@@ -35,53 +35,36 @@ This is a javascript npm package for both frontend and Backend Application (Expr
       </li>
     </ul>
     <ul>
-      <li><a href="#2-api-reference">2. API Reference</a>
+      <li><a href="#2-technology-stack">2. Technology Stack</a>
       </li>
     </ul>
     <ul>
-      <li><a href="#3-system-architecture">3. System Architecture</a>
+      <li><a href="#3-data-design">3. Data Design</a>
         <ul>
-          <li><a href="#31-high-level-architecture">3.1 High Level Architecture</a> </li>
-          <li><a href="#32-technology-stack">3.2 Technology Stack</a> </li>
-        </ul>
-      </li>
-    </ul>
-    <ul>
-      <li><a href="#4-data-design">4. Data Design</a>
-        <ul>
-          <li><a href="#41-data-entities-and-relationships">4.1 Entities and Relationships</a> </li>
+          <li><a href="#31-data-entities-and-relationships">3.1 Entities and Relationships</a> </li>
         </ul>
       </li>
     </ul> 
     <ul>
-      <li><a href="#5-installation">5. Installation</a>
-      </li>
-    </ul> 
-    <ul>
-        <li><a href="#6-usage">6. Usage</a>
+        <li><a href="#4-usage">4. Usage</a> </li>
         <ul>
-            <li><a href="#61-run-application">6.1 Run Application</a> </li>
-            <ul>
-              <li><a href="#611-run-locally">6.1.1 Run Locally</a> </li>
-              <li><a href="#612-run-docker-container">6.1.2 Run Docker Container</a> </li>
-            </ul>
+            <li><a href="#41-install-dependency-">4.1. Install Dependency</a> </li>
+            <li><a href="#42-code-snippet-">4.1. Code Snippet</a> </li>
         </ul>
-        </li>
     </ul> 
     <ul>
-        <li><a href="#7-api-testing">7. API Testing</a>
-        </li>
+        <li><a href="#5-tests-">5 Tests</a> </li>
+        <ul>
+            <li><a href="#511-test-from-node_modules">5.1.1 Test from node_modules</a> </li>
+            <li><a href="#512-test-from-npm-link">5.1.2 Test from npm link</a> </li>
+        </ul>
     </ul> 
-    <ul>
-        <li><a href="#8-tests">8. Tests</a>
-        </li>
-    </ul>  
     <ul>  
-        <li><a href="#9-license">9. License</a>
+        <li><a href="#6-license">6. License</a>
         </li>
     </ul> 
     <ul> 
-        <li><a href="#10-references">10. References</a>
+        <li><a href="#7-references">7. References</a>
         </li>
     <ul>
 
@@ -106,7 +89,7 @@ This package will allow users to:
 
 ---
 
-### **3. Technology Stack**
+### **2. Technology Stack**
 
 - **Programming Languages**: Javascript
 - **IDE**: Visual Studio Code (VSCode)
@@ -117,9 +100,9 @@ This package will allow users to:
 - **CI/CD**: GitHub Actions
 - **Code Analsis**: SonarQube
 
-## **4. Data Design**
+## **3. Data Design**
 
-### **4.1 Data Entities and Relationships**
+### **3.1 Data Entities and Relationships**
 
 | Entity | Description                                          |
 | ------ | ---------------------------------------------------- |
@@ -128,20 +111,18 @@ This package will allow users to:
 
 ---
 
-## **6. Usage**
+## **4. Usage**
 
-### **6.1 install dependency **
+### **4.1 install dependency **
 
 1 Type npm install auth-credential-validator-js install dependencies.
 
 ```bash
   npm install auth-credential-validator-js
 ```
-### **6.2 codesnippet **
+### **4.2 code snippet **
 
 ```ruby
-
-````
 
 import Validator from "auth-credential-validator-js"
 const validator = new Validator("jose mourinho","jose mpurinho@gmailcom","rtw5wwvw+-*/twrt");
@@ -163,77 +144,62 @@ console.log("validate email :" ,validator.validateEmail());
 console.log("validate username :" ,validator.validateUsername());
 console.log("validate password :" ,validator.validatePassword());
 
-````
 ```
 
 
-#### **6.1.2 Run Docker container**
+## **5. Tests ** ##
 
-1 Add Dockerfile file in project root directory and copy contents in .Dockerfile.sample.
+#### **5.1.1 Test from node_modules**
 
-2 Fill out connection string with mongoDB atlas MONGODB_URI and create a secret phrase for JSON_WEB_TOKEN_SECRET.
-
-![docker](assets/images/docker.png)
-
-3 Type docker build -t server-image . in command line to build docker image.
+1 navigate to auth-credential-validator-js directory using command below
 
 ```bash
-  docker build -t server-image .
+  cd node_modeles/auth-credential-validator-js  
 ```
 
-![dockerbuild](assets/images/dockerimage.png)
-
-3 Type docker run --name server-container -d -it -p 6000:6000 server-image to create and start container immediately.
-
-```bash
-  docker run --name server-container -d -it -p 6000:6000 server-image
-```
-
-![dockerbuild](assets/images/dockerrun.png)
-
-4 Type docker stop server-container to stop container.
-
-```bash
-  docker stop server-container
-```
-
-5 Type docker start server-container to start container.
-
-```bash
-  docker start server-container
-```
-
-## **7. API Testing**
-
-**Prerequisites** :ensure container or local application is running.
-
-**Note** : use `<a href="#2-api-reference">`API Reference `</a>` docs for testing endpoints.
-
-#### **7.1.1 Postman Environment Variables**
-
-![postmanenv](assets/images/postman_env.png)
-
----
-
-## **8. Tests**
-
-1. run test command below.
+2 type npm run test to run unit tests
 
 ```bash
   npm run test
 ```
 
-![tests](assets/images/tests.png)
+![](assets/images/testusingjest.png)
 
----
 
-## **9. License**
+#### **5.1.2 Test from npm link**
+
+Note : this test was done pre publish to npm manager
+
+1 In the root of package run npm link to create symblink globally accessible
+
+```bash
+  npm link
+```
+
+![](assets/images/npmlink.png)
+
+
+2 Create a new directory, copy script.js in Auth-Credential-Validator-JS root directory to new folder.
+
+3 Run command nom link Auth-Credential-Validator-JS to install node with created package
+
+![](assets/images/afternpmlink.png)
+
+3 Type node script.js to test package
+
+```bash
+  code script.js
+```
+
+![](assets/images/testusingnpmlink.png)
+
+## **6. License**
 
 [LICENSE](/LICENSE)
 
 ---
 
-## **10. References**
+## **7. References**
 
 * FreeCodeCamp : [Frontend Web Development: (HTML, CSS, JavaScript, TypeScript, React)](https://www.youtube.com/watch?v=MsnQ5uepIa).
 * AweSome Open Source : [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
