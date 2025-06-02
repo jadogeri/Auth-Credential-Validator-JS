@@ -1,31 +1,27 @@
 {
-  "name": "auth_credential_validator_js",
+  "name": "auth-credential-validator-js",
   "version": "1.0.0",
   "type": "module",
   "description": "Javascript package to validate email , username and password",
   "keywords": [
-    "auth_credential_validator",
-    "auth-credential-validator_js",
-    "javascript",
-    "email",
-    "username",
-    "password",
-    "credential-validator"
+    "auth_credential_validator","auth-credential-validator_js",
+    "javascript", "email", "username", "password","credential-validator",
+    "auth","credential","credentials","js","authentication"
   ],
-  "homepage": "https://github.com/jadogeri/Auth_Credential_Validator#readme",
+  "homepage": "https://github.com/jadogeri/Auth-Credential-Validator-JS#readme",
   "bugs": {
-    "url": "https://github.com/jadogeri/Auth_Credential_Validator/issues"
+    "url": "https://github.com/jadogeri/Auth-Credential-Validator-JS/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jadogeri/Auth_Credential_Validator.git"
+    "url": "git+https://github.com/jadogeri/Auth-Credential-Validator-JS.git"
   },
   "moduleDirectories": [
     "node_modules",
     "src"
 ],
 
-  "license": "ISC",
+  "license": "MIT",
   "author": "Joseph Adogeri",
   "main": "index.js",
   "scripts": {
