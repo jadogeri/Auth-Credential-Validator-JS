@@ -1,5 +1,5 @@
-import { Validator } from '../../src/entities/Validator';
-import { usernameRegex } from '../../src/regex';
+import { Validator } from '../../src/entities/Validator.js';
+import { usernameRegex } from '../../src/regex.js';
 
 
 // Import necessary modules and dependencies

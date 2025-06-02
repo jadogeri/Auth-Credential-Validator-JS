@@ -1,5 +1,5 @@
 
-import { Credential } from '../../src/entities/Credential';
+import { Credential } from '../../src/entities/Credential.js';
 import { Validator } from '../../src/entities/Validator.js';
 
 

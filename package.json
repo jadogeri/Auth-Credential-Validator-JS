@@ -1,6 +1,7 @@
 {
   "name": "auth_credential_validator_js",
   "version": "1.0.0",
+  "type": "module",
   "description": "Javascript package to validate email , username and password",
   "keywords": [
     "auth_credential_validator",
@@ -19,11 +20,16 @@
     "type": "git",
     "url": "git+https://github.com/jadogeri/Auth_Credential_Validator.git"
   },
+  "moduleDirectories": [
+    "node_modules",
+    "src"
+],
+
   "license": "ISC",
   "author": "Joseph Adogeri",
   "main": "index.js",
   "scripts": {
-    "testS": "jest"
+    "test": "jest"
   },
   "devDependencies": {
     "@babel/core": "^7.27.4",

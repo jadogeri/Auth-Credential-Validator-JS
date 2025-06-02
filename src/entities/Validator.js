@@ -5,8 +5,8 @@
  * @description class to validate user credentials
  *  
  */
-import { usernameRegex, emailRegex, passwordRegex } from "../regex";
-import { Credential } from "./Credential";
+import { usernameRegex, emailRegex, passwordRegex } from "../regex.js";
+import { Credential } from "./Credential.js";
 export class Validator {
     constructor(username, email, password){
         this.credential = new Credential(username,email,password);

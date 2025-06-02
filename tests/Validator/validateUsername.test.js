@@ -1,5 +1,5 @@
 
-import { Validator } from '../../src/entities/Validator';
+import { Validator } from '../../src/entities/Validator.js';
 
 
 // Import necessary modules and dependencies

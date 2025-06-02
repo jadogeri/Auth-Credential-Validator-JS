@@ -1,6 +1,6 @@
 
 import { Validator } from '../../src/entities/Validator.js';
-import { passwordRegex } from '../../src/regex';
+import { passwordRegex } from '../../src/regex.js';
 
 
 // Import necessary modules and dependencies

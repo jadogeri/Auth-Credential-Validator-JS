@@ -1,5 +1,5 @@
 
-import { Credential } from '../../src/entities/Credential';
+import { Credential } from '../../src/entities/Credential.js';
 
 
 // Import the Credential class
