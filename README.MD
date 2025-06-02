@@ -106,32 +106,12 @@ This package will allow users to:
 
 ---
 
-## **2. API Reference**
+### **3. Technology Stack**
 
-* [Link to Documentation ](https://documenter.getpostman.com/view/40822092/2sAYXEEdwL)
-
-## **3. System Architecture**
-
-### **3.1 High-Level Architecture**
-
-The system follows a **three-tier architecture**:
-
-1. **Presentation Layer**: This layer directly interacts with incoming HTTP requests, defines routes using Express's routing mechanism, and sends back the final response to the client.
-2. **Application Layer**: This layer encapsulates the core business logic, performing operations like data validation, calculations, and complex data manipulation, typically called by the route handlers in the presentation layer.
-3. **Data Layer**: This layer handles communication with the database, performing CRUD operations to retrieve and store data.
-
-![Architecture](assets/images/architecture.png)
-
-### **3.2 Technology Stack**
-
-- **Programming Languages**: Typescript, NOSQL, YAML
+- **Programming Languages**: Javascript
 - **IDE**: Visual Studio Code (VSCode)
-- **Backend Frameworks**: Node and Express
-- **Database**: MongoDB
-- **Test**: Jest, MockingGoose, Mongo Memory Server and Supertest
+- **Test**: Jest
 - **Plugins**: Early AI
-- **Container**: Docker
-- **Security**: JSON Web Token (JWT), Bcrypt and Nanoid
 - **Hosting**: Render.com
 - **Source Control**: Git and GitHub
 - **CI/CD**: GitHub Actions
@@ -148,52 +128,44 @@ The system follows a **three-tier architecture**:
 
 ---
 
-## **5. Installation**
-
-* [Download and install NodeJS](https://nodejs.org/en/download)
----
-
 ## **6. Usage**
 
-**Prerequisites** :installation of NodeJS and MongoDB atlas account
+### **6.1 install dependency **
 
-### **6.1 Run Application**
-
-1 Open command prompt or terminal.
-
-2 Type command git clone https://github.com/jadogeri/ServerTemplate.git then press enter.
+1 Type npm install auth-credential-validator-js install dependencies.
 
 ```bash
-  git clone https://github.com/jadogeri/ServerTemplate.git
+  npm install auth-credential-validator-js
+```
+### **6.2 codesnippet **
+
+```ruby
+
+````
+
+import Validator from "auth-credential-validator-js"
+const validator = new Validator("jose mourinho","jose mpurinho@gmailcom","rtw5wwvw+-*/twrt");
+
+console.log("*********** Testing Package before publish using npm link***********\n\n");
+console.log("validator Object : ",validator);
+console.log("validator Credentials : ",validator.getCredential());
+console.log("validate email :" ,validator.validateEmail());
+console.log("validate username :" ,validator.validateUsername());
+console.log("validate password :" ,validator.validatePassword());
+
+validator.credential.setEmail("joseMourinho@gmail.com");
+validator.credential.setUsername("Josemourinho");
+validator.credential.setPassword("Mourinho!trebl3");
+
+console.log("\n\n*********** test new credentials***********\n\n");
+
+console.log("validate email :" ,validator.validateEmail());
+console.log("validate username :" ,validator.validateUsername());
+console.log("validate password :" ,validator.validatePassword());
+
+````
 ```
 
-3 Enter command cd ServerTemplate then press enter.
-
-```bash
-  cd ServerTemplate
-```
-
-#### **6.1.1 Run Locally**
-
-1 Add .env file in project root directory and copy contents in .env.sample.
-
-2 Fill out connection_string with mongoDB atlas MONGODB_URI and create a secret phrase for JSON_WEB_TOKEN_SECRET.
-
-![env](assets/images/env.png)
-
-3 Type npm install to install dependencies.
-
-```bash
-  npm install
-```
-
-4 Type npm run dev to run server
-
-```bash
-  npm run dev
-```
-
-![env](assets/images/localoutput.png)
 
 #### **6.1.2 Run Docker container**
 
@@ -264,12 +236,7 @@ The system follows a **three-tier architecture**:
 ## **10. References**
 
 * FreeCodeCamp : [Frontend Web Development: (HTML, CSS, JavaScript, TypeScript, React)](https://www.youtube.com/watch?v=MsnQ5uepIa).
-* Dipesh Malvia : [Learn Node.js &amp; Express with Project in 2 Hours](https://www.youtube.com/watch?v=H9M02of22z4&t=140s).
 * AweSome Open Source : [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
 * Readme.so : [The easiest way to create a README](https://readme.so/)
-* Swagger :  [Swagger API Documentation](https://swagger.io/docs/)
-* Supertest :  [Guide to writing integration tests in express js with Jest and Supertest](https://dev.to/ali_adeku/guide-to-writing-integration-tests-in-express-js-with-jest-and-supertest-1059#:~:text=In%20the%20root%20directory%20of,all%20your%20integration%20test%20files)
-* MongoDB Memory Server Test Database : [Testing with MongoDB-Memory-Server ](https://dev.to/remrkabledev/testing-with-mongodb-memory-server-4ja2)
-* Unit Testing : [Unit tests in Jest with supertest, MongoDB and TypeScript](https://medium.com/@adammalej/unit-tests-in-jest-with-supertest-and-mongodb-e4d56e918ce8)
 * Mockingoose : [How to test mongoose models with jest and mockingoose](https://dev.to/darkmavis1980/how-to-test-mongoose-models-with-jest-and-mockingoose-2k10)
-* MongoDB Memory Server :  [MongoDB Memory Server tutorial in typescript](https://github.com/typegoose/mongodb-memory-server)
+
