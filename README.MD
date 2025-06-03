@@ -11,7 +11,7 @@ This is a javascript npm package for both frontend and Backend Application (Expr
 
 ## Authors
 
-- [@jadogeri](https://www.github.com/jadogeri)
+[@jadogeri](https://www.github.com/jadogeri)
 
 ## Repository
 
@@ -19,7 +19,7 @@ This is a javascript npm package for both frontend and Backend Application (Expr
 
  ## Registory
 
- [npm](https://www.npmjs.com/package/auth-credential-validator-js)
+npm : [@josephadogeridev/auth-credential-validator-js](https://www.npmjs.com/package/@josephadogeridev/auth-credential-validator-js)
 
 
 ## Screenshots

@@ -1,12 +1,12 @@
 {
-  "name": "auth-credential-validator-js",
+  "name": "@josephadogeridev/auth-credential-validator-js",
   "version": "1.0.0",
   "type": "module",
-  "description": "Javascript package to validate email , username and password",
+  "description": "Javascript package to validate email, username and password",
   "keywords": [
-    "auth_credential_validator","auth-credential-validator_js",
+    "auth-credential-validator-js","auth-credential-validator",
     "javascript", "email", "username", "password","credential-validator",
-    "auth","credential","credentials","js","authentication"
+    "auth","credential","credentials","@josephadogeridev/auth-credential-validator-js","authentication"
   ],
     "publishConfig": {
     "access": "public"
