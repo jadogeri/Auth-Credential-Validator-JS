@@ -168,22 +168,23 @@ The `Credential` class represents a single credential with its attributes and me
 The `Validator` class represents a single validator with its attributes and methods.
 
 *   **Attributes:**
-    *   `username` (string): The username of the credential.
-    *   `email` (string): The email of the credential.
-    *   `password` (string): The password of the credential.
+    *   `credential` (object): The credential object of the validator.
+    *   `usernameRegex` (string): The username regex of the validator.
+    *   `emailRegex` (string): The email regex of the validator.
+    *   `passwordRegex` (string): The password regex of the validator.
 *   **Methods:**
     *   `constructor(username ,email ,password)`: The constructor method to initialize a new `Credential` object.
         *   **Parameters:**
-            *   `username` (string): The username of the credential.
-            *   `email` (string): The email of the credential.
-            *   `password` (string): The password of the credential.
-        *   **Description:** Creates a new `Credential` instance with the provided username, email, and password.
-    *   `getUsername()`: Returns a string containing the credential's username.
-        *   **Description:** Retrieves the username as a readable string.
-    *   `getEmail()`: Returns a string containing the credential's email.
-        *   **Description:** Retrieves the email as a readable string.
-    *   `getPassword()`: Returns a string containing the credential's password.
-        *   **Description:** Retrieves the password as a readable string.
+            *   `username` (string): The initial username of the credential.
+            *   `email` (string): The initial email of the credential.
+            *   `password` (string): The initial password of the credential.
+        *   **Description:** Creates a new `Validator` instance with optional username, email, and password.
+    *   `validateUsername()`: Returns a boolean containing the Validator's username test result.
+        *   **Description:** usernameRegex tests if `Credential` username is valid then retrieves the result .
+    *   `validateEmail()`: Returns a boolean containing the Validator' email test result.
+        *   **Description:** emailRegex tests if `Credential` email is valid then retrieves the result .
+    *   `validatePassword()`: Returns a boolean containing the Validator' password test result.
+        *   **Description:** passwordRegex tests if `Credential` password is valid then retrieves the result .
     *   `setUsername(username)`: Returns a string containing the credential's username.
         *   **Parameters:**
             *   `username` (`string` ): The new username of a credential.
