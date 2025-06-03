@@ -1,4 +1,4 @@
-## **Auth Credential Validator JS**
+# **Auth Credential Validator JS**
 
 **Version:** 1.0.0
 **Date:** June 2, 2025
@@ -125,7 +125,79 @@ This package will allow users to:
 ```bash
   npm install auth-credential-validator-js
 ```
-### 4.2 code snippet ###
+### 4.2 Classes and Methods ###
+
+This project includes the following core components:
+
+#### 4.2.1 `Credential` Class ####
+
+The `Credential` class represents a single credential with its attributes and methods.
+
+*   **Attributes:**
+    *   `username` (string): The username of the credential.
+    *   `email` (string): The email of the credential.
+    *   `password` (string): The password of the credential.
+*   **Methods:**
+    *   `constructor(username ,email ,password)`: The constructor method to initialize a new `Credential` object.
+        *   **Parameters:**
+            *   `username` (string): The username of the credential.
+            *   `email` (string): The email of the credential.
+            *   `password` (string): The password of the credential.
+        *   **Description:** Creates a new `Credential` instance with the provided username, email, and password.
+    *   `getUsername()`: Returns a string containing the credential's username.
+        *   **Description:** Retrieves the username as a readable string.
+    *   `getEmail()`: Returns a string containing the credential's email.
+        *   **Description:** Retrieves the email as a readable string.
+    *   `getPassword()`: Returns a string containing the credential's password.
+        *   **Description:** Retrieves the password as a readable string.
+    *   `setUsername(username)`: Returns a string containing the credential's username.
+        *   **Parameters:**
+            *   `username` (`string` ): The new username of a credential.
+        *   **Description:** updates the username of the credential object.
+    *   `setEmail(email)`: Returns a string containing the credential's email.
+        *   **Parameters:**
+            *   `email` (`string` ): The new email of a credential.
+        *   **Description:** updates the email of the credential object.
+    *   `setPassword(password)`: Returns a string containing the credential's password.
+        *   **Parameters:**
+            *   `password` (`string` ): The new password of a credential.
+        *   **Description:** updates the password of the credential object.
+
+#### 4.2.2 `Validator` Class ####
+
+The `Validator` class represents a single validator with its attributes and methods.
+
+*   **Attributes:**
+    *   `username` (string): The username of the credential.
+    *   `email` (string): The email of the credential.
+    *   `password` (string): The password of the credential.
+*   **Methods:**
+    *   `constructor(username ,email ,password)`: The constructor method to initialize a new `Credential` object.
+        *   **Parameters:**
+            *   `username` (string): The username of the credential.
+            *   `email` (string): The email of the credential.
+            *   `password` (string): The password of the credential.
+        *   **Description:** Creates a new `Credential` instance with the provided username, email, and password.
+    *   `getUsername()`: Returns a string containing the credential's username.
+        *   **Description:** Retrieves the username as a readable string.
+    *   `getEmail()`: Returns a string containing the credential's email.
+        *   **Description:** Retrieves the email as a readable string.
+    *   `getPassword()`: Returns a string containing the credential's password.
+        *   **Description:** Retrieves the password as a readable string.
+    *   `setUsername(username)`: Returns a string containing the credential's username.
+        *   **Parameters:**
+            *   `username` (`string` ): The new username of a credential.
+        *   **Description:** updates the username of the credential object.
+    *   `setEmail(email)`: Returns a string containing the credential's email.
+        *   **Parameters:**
+            *   `email` (`string` ): The new email of a credential.
+        *   **Description:** updates the email of the credential object.
+    *   `setPassword(password)`: Returns a string containing the credential's password.
+        *   **Parameters:**
+            *   `password` (`string` ): The new password of a credential.
+        *   **Description:** updates the password of the credential object.
+
+### 4.3 code snippet ###
 
 ```ruby
 
@@ -156,10 +228,10 @@ console.log("validate password :" ,validator.validatePassword());
 
 #### **5.1 Test from node_modules**
 
-1 navigate to auth-credential-validator-js directory using command below
+1 navigate to cd @josephadogeridev/auth-credential-validator-js directory using command below
 
 ```bash
-  cd node_modeles/auth-credential-validator-js  
+  cd node_modules/@josephadogeridev/auth-credential-validator-js  
 ```
 
 2 type npm run test to run unit tests
@@ -210,4 +282,54 @@ Note : this test was done pre publish to npm manager
 * AweSome Open Source : [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
 * Readme.so : [The easiest way to create a README](https://readme.so/)
 * Mockingoose : [How to test mongoose models with jest and mockingoose](https://dev.to/darkmavis1980/how-to-test-mongoose-models-with-jest-and-mockingoose-2k10)
+
+
+
+# My Awesome Project
+
+## Overview
+
+This project provides a simple Python library for managing a collection of books. It utilizes object-oriented principles to represent books and their associated operations.
+
+## Classes and Methods
+
+This project includes the following core components:
+
+### `Book` Class
+
+The `Book` class represents a single book with its attributes and methods.
+
+*   **Attributes:**
+    *   `title` (string): The title of the book.
+    *   `author` (string): The author of the book.
+    *   `isbn` (string): The ISBN of the book.
+
+*   **Methods:**
+    *   `__init__(self, title, author, isbn)`: The constructor method to initialize a new `Book` object.
+        *   **Parameters:**
+            *   `title` (string): The title of the book.
+            *   `author` (string): The author of the book.
+            *   `isbn` (string): The ISBN of the book.
+        *   **Description:** Creates a new `Book` instance with the provided title, author, and ISBN.
+    *   `get_details(self)`: Returns a formatted string containing the book's details.
+        *   **Description:** Retrieves the title, author, and ISBN and formats them into a readable string.
+
+### `Library` Class
+
+The `Library` class manages a collection of `Book` objects.
+
+*   **Attributes:**
+    *   `books` (list): A list containing `Book` objects.
+
+*   **Methods:**
+    *   `__init__(self)`: The constructor method to initialize a new `Library` object.
+        *   **Description:** Creates an empty list to store books.
+    *   `add_book(self, book)`: Adds a `Book` object to the library.
+        *   **Parameters:**
+            *   `book` (`Book` object): The book to be added to the library.
+        *   **Description:** Appends the provided `Book` object to the internal list of books.
+    *   `list_books(self)`: Prints the details of all books in the library.
+        *   **Description:** Iterates through the list of books and prints the details of each book using the `get_details()` method of the `Book` class.
+
+
 

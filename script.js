@@ -1,4 +1,4 @@
-import Validator from "auth_credential_validator_js"
+import Validator from "@josephadogeridev/auth-credential-validator-js"
 const validator = new Validator("jose mourinho","jose mpurinho@gmailcom","rtw5wwvw+-*/twrt");
 
 console.log("*********** Testing Package before publish using npm link***********\n\n");
