@@ -17,6 +17,11 @@ This is a javascript npm package for both frontend and Backend Application (Expr
 
  [https://github.com/jadogeri/Auth-Credential-Validator-JS.git](https://github.com/jadogeri/Auth-Credential-Validator-JS.git)
 
+ ## Registory
+
+ [npm](https://www.npmjs.com/package/auth-credential-validator-js)
+
+
 ## Screenshots
 
 | ![Screenshot 1](assets/images/screenshot1.png) | ![screenshot 2](assets/images/screenshot2.png) |
@@ -48,15 +53,15 @@ This is a javascript npm package for both frontend and Backend Application (Expr
     <ul>
         <li><a href="#4-usage">4. Usage</a> </li>
         <ul>
-            <li><a href="#41-install-dependency-">4.1. Install Dependency</a> </li>
-            <li><a href="#42-code-snippet-">4.1. Code Snippet</a> </li>
+            <li><a href="#41-install-dependency">4.1 Install Dependency</a> </li>
+            <li><a href="#42-code-snippet">4.2 Code Snippet</a> </li>
         </ul>
     </ul> 
     <ul>
-        <li><a href="#5-tests-">5 Tests</a> </li>
+        <li><a href="#5-tests-">5. Tests</a> </li>
         <ul>
-            <li><a href="#511-test-from-node_modules">5.1.1 Test from node_modules</a> </li>
-            <li><a href="#512-test-from-npm-link">5.1.2 Test from npm link</a> </li>
+            <li><a href="#51-test-from-node_modules">5.1 Test from node_modules</a> </li>
+            <li><a href="#52-test-from-npm-link">5.2 Test from npm link</a> </li>
         </ul>
     </ul> 
     <ul>  
@@ -113,14 +118,14 @@ This package will allow users to:
 
 ## **4. Usage**
 
-### **4.1 install dependency **
+### 4.1 install dependency ###
 
 1 Type npm install auth-credential-validator-js install dependencies.
 
 ```bash
   npm install auth-credential-validator-js
 ```
-### **4.2 code snippet **
+### 4.2 code snippet ###
 
 ```ruby
 
@@ -147,9 +152,9 @@ console.log("validate password :" ,validator.validatePassword());
 ```
 
 
-## **5. Tests ** ##
+## 5. Tests  ##
 
-#### **5.1.1 Test from node_modules**
+#### **5.1 Test from node_modules**
 
 1 navigate to auth-credential-validator-js directory using command below
 
@@ -166,7 +171,7 @@ console.log("validate password :" ,validator.validatePassword());
 ![](assets/images/testusingjest.png)
 
 
-#### **5.1.2 Test from npm link**
+#### **5.2 Test from npm link**
 
 Note : this test was done pre publish to npm manager
 
