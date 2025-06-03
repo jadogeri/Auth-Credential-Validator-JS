@@ -11,7 +11,7 @@ This is a javascript npm package for both frontend and Backend Application (Expr
 
 ## Authors
 
-- [@jadogeri](https://www.github.com/jadogeri)
+[@jadogeri](https://www.github.com/jadogeri)
 
 ## Repository
 
