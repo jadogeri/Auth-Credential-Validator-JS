@@ -8,6 +8,9 @@
     "javascript", "email", "username", "password","credential-validator",
     "auth","credential","credentials","js","authentication"
   ],
+    "publishConfig": {
+    "access": "public"
+  },
   "homepage": "https://github.com/jadogeri/Auth-Credential-Validator-JS#readme",
   "bugs": {
     "url": "https://github.com/jadogeri/Auth-Credential-Validator-JS/issues"
