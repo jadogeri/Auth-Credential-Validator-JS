@@ -7,7 +7,7 @@
 
 ## Description
 
-This is a javascript npm package for both frontend and Backend Application (Express + Node + Mongoose) which validate credentials (username, email password) using dynamic regex field.
+This is a javascript npm package for both frontend and backend Applications (Express + Node + React + React Native) which validate credentials (username, email and password) using dynamic regex field.
 
 ## Authors
 
@@ -19,7 +19,7 @@ This is a javascript npm package for both frontend and Backend Application (Expr
 
  ## Registory
 
-npm : [@josephadogeridev/auth-credential-validator-js](https://www.npmjs.com/package/@josephadogeridev/auth-credential-validator-js)
+[https://www.npmjs.com/package/@josephadogeridev/auth-credential-validator-js](https://www.npmjs.com/package/@josephadogeridev/auth-credential-validator-js)
 
 
 ## Screenshots
@@ -54,11 +54,16 @@ npm : [@josephadogeridev/auth-credential-validator-js](https://www.npmjs.com/pac
         <li><a href="#4-usage">4. Usage</a> </li>
         <ul>
             <li><a href="#41-install-dependency">4.1 Install Dependency</a> </li>
-            <li><a href="#42-code-snippet">4.2 Code Snippet</a> </li>
+            <li><a href="#42-classes-and-methods">4.2 Classes and Methods</a> </li>
+            <ul>
+                <li><a href="#421-credential-class">4.2.1 Credential Class</a> </li>
+                <li><a href="#422-validator-class">4.2.2 Validator Class</a> </li>
+            </ul>
+            <li><a href="#43-code-snippet">4.3 Code Snippet</a> </li>
         </ul>
     </ul> 
     <ul>
-        <li><a href="#5-tests-">5. Tests</a> </li>
+        <li><a href="#5-tests">5. Tests</a> </li>
         <ul>
             <li><a href="#51-test-from-node_modules">5.1 Test from node_modules</a> </li>
             <li><a href="#52-test-from-npm-link">5.2 Test from npm link</a> </li>
@@ -77,20 +82,21 @@ npm : [@josephadogeridev/auth-credential-validator-js](https://www.npmjs.com/pac
 
 ### **1.1 Purpose**
 
-This document outlines the system architecture, components, and design considerations for Contact Management App. The goal is to provide a template for backend developers to handle CRUD operations and authentication flow.
+This document outlines the package architecture, components, and design considerations for Auth Credential Validator JS package. The goal is to provide support in validating user credentials, ensuring credentials adhere to standards for most online accounts.
 
 ### **1.2 Scope**
 
 This package will allow users to:
 
 - Accept valid credentials (username, email and password).
-- Resolve undefined and undefined values as inputs.
-- Provide security to user data.
+- Resolve undefined and null values as inputs.
+- Provide ability to alter regular expression used to validate credentials.
+- Render results of credentials after test.
 
 ### **1.3 Intended Audience**
 
-- Junior or Senior backend developers.
-- beginners learning typescript.
+- Junior or Senior developers.
+- beginners learning javascript.
 
 ---
 
@@ -100,10 +106,10 @@ This package will allow users to:
 - **IDE**: Visual Studio Code (VSCode)
 - **Test**: Jest
 - **Plugins**: Early AI
-- **Hosting**: Render.com
+- **Registory**: NPM (Node Package Manager)
 - **Source Control**: Git and GitHub
 - **CI/CD**: GitHub Actions
-- **Code Analsis**: SonarQube
+- **Code Analysis**: SonarQube
 
 ## **3. Data Design**
 
@@ -111,8 +117,8 @@ This package will allow users to:
 
 | Entity | Description                                          |
 | ------ | ---------------------------------------------------- |
-| CREDENTIAL   | User account information used to authenticate users. |
-| VALIDATOR  | Validates authentication information of Users.           |
+| CREDENTIAL   | User account information. |
+| VALIDATOR  | Validates auth information of Users.           |
 
 ---
 
@@ -120,10 +126,10 @@ This package will allow users to:
 
 ### 4.1 install dependency ###
 
-1 Type npm install auth-credential-validator-js install dependencies.
+1 Type npm install @josephadogeridev/auth-credential-validator-js to install dependencies.
 
 ```bash
-  npm install auth-credential-validator-js
+  npm install @josephadogeridev/auth-credential-validator-js
 ```
 ### 4.2 Classes and Methods ###
 
@@ -150,15 +156,15 @@ The `Credential` class represents a single credential with its attributes and me
         *   **Description:** Retrieves the email as a readable string.
     *   `getPassword()`: Returns a string containing the credential's password.
         *   **Description:** Retrieves the password as a readable string.
-    *   `setUsername(username)`: Returns a string containing the credential's username.
+    *   `setUsername(username)`: Updates the username attribute.
         *   **Parameters:**
             *   `username` (`string` ): The new username of a credential.
         *   **Description:** updates the username of the credential object.
-    *   `setEmail(email)`: Returns a string containing the credential's email.
+    *   `setEmail(email)`: Updates the email attribute.
         *   **Parameters:**
             *   `email` (`string` ): The new email of a credential.
         *   **Description:** updates the email of the credential object.
-    *   `setPassword(password)`: Returns a string containing the credential's password.
+    *   `setPassword(password)`: Updates the password attribute.
         *   **Parameters:**
             *   `password` (`string` ): The new password of a credential.
         *   **Description:** updates the password of the credential object.
@@ -168,35 +174,37 @@ The `Credential` class represents a single credential with its attributes and me
 The `Validator` class represents a single validator with its attributes and methods.
 
 *   **Attributes:**
-    *   `credential` (object): The credential object of the validator.
+    *   `credential` (RegExp object): The credential object of the validator.
     *   `usernameRegex` (string): The username regex of the validator.
     *   `emailRegex` (string): The email regex of the validator.
     *   `passwordRegex` (string): The password regex of the validator.
 *   **Methods:**
-    *   `constructor(username ,email ,password)`: The constructor method to initialize a new `Credential` object.
+    *   `constructor(username, email, password)`: The constructor method to initialize a new `Validator` object.
         *   **Parameters:**
-            *   `username` (string): The initial username of the credential.
-            *   `email` (string): The initial email of the credential.
-            *   `password` (string): The initial password of the credential.
+            *   `username` (string): The initial username of the credential object.
+            *   `email` (string): The initial email of the credential object.
+            *   `password` (string): The initial password of the credential object.
         *   **Description:** Creates a new `Validator` instance with optional username, email, and password.
     *   `validateUsername()`: Returns a boolean containing the Validator's username test result.
-        *   **Description:** usernameRegex tests if `Credential` username is valid then retrieves the result .
+        *   **Description:** Tests if `Credential`'s username is valid then retrieves the result.
     *   `validateEmail()`: Returns a boolean containing the Validator' email test result.
-        *   **Description:** emailRegex tests if `Credential` email is valid then retrieves the result .
+        *   **Description:** Tests if `Credential`'s email is valid then retrieves the result.
     *   `validatePassword()`: Returns a boolean containing the Validator' password test result.
-        *   **Description:** passwordRegex tests if `Credential` password is valid then retrieves the result .
-    *   `setUsername(username)`: Returns a string containing the credential's username.
+        *   **Description:** Tests if `Credential`'s password is valid then retrieves the result .
+    *   `setUsernameRegex(regex)`: Updates the usernameRegex attribute.
         *   **Parameters:**
-            *   `username` (`string` ): The new username of a credential.
-        *   **Description:** updates the username of the credential object.
-    *   `setEmail(email)`: Returns a string containing the credential's email.
+            *   `regex` (`RegExp` ): The new usernameRegex of a validator.
+        *   **Description:** updates the usernameRegex attribute of the validator object.
+    *   `setEmailRegex(regex)`: Updates the emailRegex attribute.
         *   **Parameters:**
-            *   `email` (`string` ): The new email of a credential.
-        *   **Description:** updates the email of the credential object.
-    *   `setPassword(password)`: Returns a string containing the credential's password.
+            *   `regex` (`RegExp` ): The new emailRegex of a validator.
+        *   **Description:** updates the emailRegex attribute of the validator object.
+    *   `setPasswordRegex(password)`: Updates the passwordRegex attribute.
         *   **Parameters:**
-            *   `password` (`string` ): The new password of a credential.
-        *   **Description:** updates the password of the credential object.
+            *   `regex` (`RegExp` ): The new passwordRegex of a validator.
+        *   **Description:** updates the passwordRegex attribute of the validator object.
+    *   `getCredential()`: Returns a credential object.
+        *   **Description:** Retrieves the credential attribute of a validator .
 
 ### 4.3 code snippet ###
 
@@ -221,6 +229,12 @@ console.log("\n\n*********** test new credentials***********\n\n");
 console.log("validate email :" ,validator.validateEmail());
 console.log("validate username :" ,validator.validateUsername());
 console.log("validate password :" ,validator.validatePassword());
+
+console.log("\n\n*********** update regex ***********\n\n");
+validator.setEmailRegex(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
+validator.setUsernameRegex(/^(?=.*[A-Za-z0-9]).{3,30}$/);
+validator.setPasswordRegex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#\$%\^&\*])[\w!@#\$%\^&\*]{8,30}$/);
+
 
 ```
 
@@ -248,7 +262,7 @@ console.log("validate password :" ,validator.validatePassword());
 
 Note : this test was done pre publish to npm manager
 
-1 In the root of package run npm link to create symblink globally accessible
+1 In the root of package run npm link to create symbolic link  between a local package under development and another Node.js project that wants to use it as a dependency. 
 
 ```bash
   npm link
@@ -257,13 +271,13 @@ Note : this test was done pre publish to npm manager
 ![](assets/images/npmlink.png)
 
 
-2 Create a new directory, copy script.js in Auth-Credential-Validator-JS root directory to new folder.
+2 Create a new directory, copy script.js in node_modules/@josephadogeridev/Auth-Credential-Validator-JS directory to new folder.
 
-3 Run command nom link Auth-Credential-Validator-JS to install node with created package
+3 Run command npm link @josephadogeridev/Auth-Credential-Validator-JS to install node with created package.
 
 ![](assets/images/afternpmlink.png)
 
-3 Type node script.js to test package
+3 Type node script.js to test package.
 
 ```bash
   code script.js
@@ -283,54 +297,5 @@ Note : this test was done pre publish to npm manager
 * AweSome Open Source : [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
 * Readme.so : [The easiest way to create a README](https://readme.so/)
 * Mockingoose : [How to test mongoose models with jest and mockingoose](https://dev.to/darkmavis1980/how-to-test-mongoose-models-with-jest-and-mockingoose-2k10)
-
-
-
-# My Awesome Project
-
-## Overview
-
-This project provides a simple Python library for managing a collection of books. It utilizes object-oriented principles to represent books and their associated operations.
-
-## Classes and Methods
-
-This project includes the following core components:
-
-### `Book` Class
-
-The `Book` class represents a single book with its attributes and methods.
-
-*   **Attributes:**
-    *   `title` (string): The title of the book.
-    *   `author` (string): The author of the book.
-    *   `isbn` (string): The ISBN of the book.
-
-*   **Methods:**
-    *   `__init__(self, title, author, isbn)`: The constructor method to initialize a new `Book` object.
-        *   **Parameters:**
-            *   `title` (string): The title of the book.
-            *   `author` (string): The author of the book.
-            *   `isbn` (string): The ISBN of the book.
-        *   **Description:** Creates a new `Book` instance with the provided title, author, and ISBN.
-    *   `get_details(self)`: Returns a formatted string containing the book's details.
-        *   **Description:** Retrieves the title, author, and ISBN and formats them into a readable string.
-
-### `Library` Class
-
-The `Library` class manages a collection of `Book` objects.
-
-*   **Attributes:**
-    *   `books` (list): A list containing `Book` objects.
-
-*   **Methods:**
-    *   `__init__(self)`: The constructor method to initialize a new `Library` object.
-        *   **Description:** Creates an empty list to store books.
-    *   `add_book(self, book)`: Adds a `Book` object to the library.
-        *   **Parameters:**
-            *   `book` (`Book` object): The book to be added to the library.
-        *   **Description:** Appends the provided `Book` object to the internal list of books.
-    *   `list_books(self)`: Prints the details of all books in the library.
-        *   **Description:** Iterates through the list of books and prints the details of each book using the `get_details()` method of the `Book` class.
-
 
 
